@@ -69,6 +69,71 @@ struct ContentView: View {
 }
 //=====================================================================
 
+import SwiftUI
+
+
+
+struct ExpenseItem: Identifiable {
+
+    
+    let id = UUID()
+    let name: String
+    let type: String
+    let amount: Double
+}
+
+@Observable
+class Expenses {
+    var items = [ExpenseItem]()
+}
+
+
+struct ContentView: View {
+    @State private var expenses = Expenses()
+    
+    @State private var showingAddExpense = false // Tracking if sheet is showing
+    
+    var body: some View {
+        NavigationStack {
+            List {
+                
+                
+                ForEach(expenses.items, id: \.id){ item in
+                    
+                    Text(item.name)
+                }
+                .onDelete(perform: removeItems)
+            }
+            .navigationTitle("iExpense")
+            .toolbar {
+                EditButton()
+                Button("Add Expense", systemImage: "plus"){
+                
+                    //When button is tapped, show Add new expense sheet
+                    
+                    showingAddExpense = true
+                    
+                    
+                    
+                }
+            }
+            .sheet(isPresented: $showingAddExpense){
+                AddView(expenses: expenses)
+            }
+            
+        }
+    }
+    
+    func removeItems(at offsets: IndexSet){
+        expenses.items.remove(atOffsets: offsets)
+    }
+    
+}
+
+#Preview {
+    ContentView()
+}
+
 // ===== AddView()
 
 import SwiftUI
