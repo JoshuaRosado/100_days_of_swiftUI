@@ -1,7 +1,7 @@
 import UIKit
 
 
-//Challenge
+//Challenge 100% COMPLETED
 
 
 
@@ -15,5 +15,5 @@ import UIKit
 // 2 ----  Try changing project 7 so that it lets users edit their issue name in the navigation title rather than a separate textfield. Which option do you prefer?
 
 
-// INCOMPLETED*
+// COMPLETED!
 // 3 ---- Return to project 8 (Moonshot), and upgrade it to use NavigationLink(value:). This means adding Hashable conformance, and thinking carefully how to use navigationDestination().
