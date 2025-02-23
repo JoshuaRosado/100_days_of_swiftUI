@@ -14,6 +14,6 @@
 // CHALLENGE 2 - COMPLETED
 //If our call to placeOrder() fails – for example if there is no internet connection – show an informative alert for the user. To test this, try commenting out the request.httpMethod = "POST" line in your code, which should force the request to fail.
 
-// CHALLENGE 3 -
+// CHALLENGE 3 - COMPLETED
 
 //For a more challenging task, try updating the Order class so it saves data such as the user's delivery address to UserDefaults. This takes a little thinking, because @AppStorage won't work here, and you'll find getters and setters cause problems with Codable support. Can you find a middle ground?
