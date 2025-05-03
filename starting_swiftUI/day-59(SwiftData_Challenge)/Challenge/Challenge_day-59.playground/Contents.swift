@@ -6,7 +6,7 @@ import UIKit
 //All three of these challenges relate to you upgrade project 7, iExpense:
 //
 
-// Challenge 1
+// Challenge 1 - Completed
 //Start by upgrading it to use SwiftData.
 
 // Challenge 2
