@@ -9,7 +9,7 @@ import UIKit
 // Challenge 1 - Completed
 //Start by upgrading it to use SwiftData.
 
-// Challenge 2
+// Challenge 2 - Completed
 //Add a customizable sort order option: by name or by amount.
 
 // Challenge 3
