@@ -12,5 +12,5 @@ import UIKit
 // Challenge 2 - Completed
 //Add a customizable sort order option: by name or by amount.
 
-// Challenge 3
+// Challenge 3 - Completed
 //Add a filter option to show all expenses, just personal expenses, or just business expenses.
