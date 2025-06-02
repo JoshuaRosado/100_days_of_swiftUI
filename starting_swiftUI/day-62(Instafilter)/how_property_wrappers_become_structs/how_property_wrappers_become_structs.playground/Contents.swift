@@ -17,10 +17,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Hello, world!")
+                // set blur radius to be this value
                 .blur(radius: blurAmount)
             
+            // use a slider to update de value: INT between 0 and 20
             Slider(value: $blurAmount, in : 0...20)
             
+            // add a random button, when is tapped it will update the value to a random INT
             Button("Random Blur"){
                 blurAmount = Double.random(in: 0...20)
             }
