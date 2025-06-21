@@ -4,7 +4,8 @@ import UIKit
 // Importing an Image into SwiftUI using PhotosPicker
 
 
-import PhotosUI
+
+import PhotosUI //*
 import SwiftUI
 
 struct ContentView: View {
@@ -34,6 +35,7 @@ struct ContentView: View {
             }
             // To avoid having the systemImage to be blue (SwiftUI letting users know that the image is interactive) use buttonStyle plain
             .buttonStyle(.plain)
+            .onChange(of: selectedItem, loadImage)
                 Spacer()
             
             HStack{
@@ -71,7 +73,7 @@ struct ContentView: View {
             guard let imageData = try await selectedItem?.loadTransferable(type: Data.self) else { return }
             
             // insert imageData into a UIImage
-            guard UIImage(data: imageData) != nil else { return }
+            guard let inputImage = UIImage(data: imageData) else { return }
             
             
         }
