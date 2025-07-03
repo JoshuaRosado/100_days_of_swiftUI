@@ -9,7 +9,6 @@ import UIKit
 //Explore the range of available Core Image filters, and add any three of your choosing to the app.
 
 
-
 import CoreImage
 import CoreImage.CIFilterBuiltins
 import PhotosUI //*
@@ -93,6 +92,12 @@ struct ContentView: View {
  
         .confirmationDialog("Select a filter", isPresented: $showingFilters){
             Button("Crystallize") { setFilter(CIFilter.crystallize())}
+            
+            // Challenge 3 Completed
+            Button("Bloom"){ setFilter(CIFilter.bloom())}
+            Button("Bokeh Blur") { setFilter(CIFilter.bokehBlur())}
+            Button("Morphology Maximum") { setFilter(CIFilter.morphologyMaximum())}
+            
             Button("Edges") { setFilter(CIFilter.edges())}
             Button("Gaussian Blur") { setFilter(CIFilter.gaussianBlur())}
             Button("Pixellate") { setFilter(CIFilter.pixellate())}
