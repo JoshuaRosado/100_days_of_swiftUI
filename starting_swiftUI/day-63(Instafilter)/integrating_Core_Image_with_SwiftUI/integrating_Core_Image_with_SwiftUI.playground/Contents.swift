@@ -9,17 +9,20 @@ import CoreImage.CIFilterBuiltins
 import SwiftUI
 
 struct ContentView: View{
-    
+    //our var image will be an optional Image
     @State private var image: Image?
     var body: some View {
         VStack{
-            image?
+            image? // if there's an image, display it
+                //modifiers
                 .resizable()
                 .scaledToFit()
         }
+        // when the View appears, perform the loadImage function
         .onAppear(perform: loadImage)
     }
     
+    // loading method
     func loadImage(){
         let inputImage = UIImage(resource: .italy)
         let beginImage = CIImage(image: inputImage)

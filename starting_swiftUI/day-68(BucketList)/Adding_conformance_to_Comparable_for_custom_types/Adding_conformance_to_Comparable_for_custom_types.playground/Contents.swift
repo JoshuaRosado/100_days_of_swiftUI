@@ -16,6 +16,8 @@ struct User: Comparable, Identifiable{ // Add Comparable
     let id = UUID()
     let firstName:String
     let lastName: String
+    let occupation: String
+    
     
     // lhs = left hand side
     // rhs = right hand side
@@ -31,14 +33,17 @@ struct User: Comparable, Identifiable{ // Add Comparable
 
 struct ContentView: View {
     let users = [
-        User(firstName: " Khai", lastName: "Asher"),
-        User(firstName: " Cataleya", lastName: "Grace"),
-        User(firstName: " Alexis", lastName: "Elizabeth")
+        User(firstName: " Khai", lastName: "Asher", occupation: "Explorer"),
+        User(firstName: " Cataleya", lastName: "Grace", occupation: "Doctor"),
+        User(firstName: " Alexis", lastName: "Elizabeth", occupation: "Personal Trainer")
     ] // .sorted {
     //$0.lastName < $1.lastName
     
     var body: some View {
         List(users){ user in
+            Text("\(user.lastName),\(user.firstName)")
+            Text("\(user.lastName),\(user.firstName)")
+            Text("\(user.lastName),\(user.firstName)")
             Text("\(user.lastName),\(user.firstName)")
         }
     }
