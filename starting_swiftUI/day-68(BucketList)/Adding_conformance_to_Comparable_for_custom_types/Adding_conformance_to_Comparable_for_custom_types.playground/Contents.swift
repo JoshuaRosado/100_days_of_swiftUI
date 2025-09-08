@@ -1,9 +1,4 @@
-import UIKit
 
-
-// Adding conformance to Comparable for custom types
-
-//
 //  ContentView.swift
 //  BucketList
 //
@@ -16,8 +11,6 @@ struct User: Comparable, Identifiable{ // Add Comparable
     let id = UUID()
     let firstName:String
     let lastName: String
-    let occupation: String
-    
     
     // lhs = left hand side
     // rhs = right hand side
@@ -33,17 +26,14 @@ struct User: Comparable, Identifiable{ // Add Comparable
 
 struct ContentView: View {
     let users = [
-        User(firstName: " Khai", lastName: "Asher", occupation: "Explorer"),
-        User(firstName: " Cataleya", lastName: "Grace", occupation: "Doctor"),
-        User(firstName: " Alexis", lastName: "Elizabeth", occupation: "Personal Trainer")
+        User(firstName: " Elvis", lastName: "Presley"),
+        User(firstName: " Ilia", lastName: "Topuria"),
+        User(firstName: " Bob", lastName: "Marley")
     ] // .sorted {
     //$0.lastName < $1.lastName
     
     var body: some View {
         List(users){ user in
-            Text("\(user.lastName),\(user.firstName)")
-            Text("\(user.lastName),\(user.firstName)")
-            Text("\(user.lastName),\(user.firstName)")
             Text("\(user.lastName),\(user.firstName)")
         }
     }
@@ -52,4 +42,3 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
-
